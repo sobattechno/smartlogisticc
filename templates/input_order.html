@@ -1,0 +1,131 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="pd-ltr-20 xs-pd-20-10">
+    <div class="min-height-200px">
+        <div class="page-header">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="title">
+                        <h4>Order Online</h4>
+                    </div>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+        <div class="pd-20 bg-white border-radius-4 box-shadow mb-30">
+            <div class="pd-20 card-box mb-30">
+                <div class="clearfix">
+                    <h4 class="text-blue h4">Input Order</h4>
+                </div>
+                <div class="wizard-content">
+                    <form method="POST" class="tab-wizard wizard-circle wizard">
+                        <h5>Personal Info</h5>
+                        <section>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>First Name :</label>
+                                        <input name="first_name" type="text" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Last Name :</label>
+                                        <input name="last_name" type="text" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Email Address :</label>
+                                        <input name="email" type="email" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Phone Number :</label>
+                                        <input name="phone"  type="text" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Select City :</label>
+                                        <select id="province" name="province" class="custom-select form-control">
+                                            <option value="">Pilih Provinsi</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Select City :</label>
+                                        <select id="cities" name="city" class="custom-select form-control">
+                                            <option value="">Pilih Kota</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <h5>Checkout</h5>
+                        <section>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Produk</label>
+                                        <select name="produk"  class="form-control">
+                                            <option>Pilih Produk</option>
+                                            <option>Zuriat, 150000</option>
+                                            <option>Garam Himalaya, 120000</option>
+                                            <option>Ravens Egsy, 50000</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Quantity :</label>
+                                        <input name="qty"  type="number" class="form-control" />
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Pesan untuk penjual</label>
+                                        <textarea name="message"  class="form-control"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </section>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- success Popup html Start -->
+<div class="modal fade" id="success-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body text-center font-18">
+                <h3 class="mb-20">Form Submitted!</h3>
+                <div class="mb-30 text-center">
+                    <img src="vendors/images/success.png" />
+                </div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                do eiusmod
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">
+                    Done
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- success Popup html End -->
+{% endblock %}
